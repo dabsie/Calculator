@@ -85,27 +85,27 @@ class ViewController: UIViewController {
     }
     */
     @IBAction func equalSignPressed(_ sender: UIButton) {
-        if stilltyping {
-            secondOperand = currentInput
-            if operationSign == 13{
-                currentInput = firstOperand / secondOperand
-                stilltyping = false
+            if stilltyping {
+                secondOperand = currentInput
+                if operationSign == 13{
+                    currentInput = firstOperand / secondOperand
+                    stilltyping = false
+                }
+                else if operationSign == 14{
+                    currentInput = firstOperand * secondOperand
+                    stilltyping = false
+                }
+                else if operationSign == 15{
+                    currentInput = firstOperand - secondOperand
+                    stilltyping = false
+                }
+                else if operationSign == 16{
+                    currentInput = firstOperand + secondOperand
+                    stilltyping = false
+                }
             }
-            else if operationSign == 14{
-                currentInput = firstOperand * secondOperand
-                stilltyping = false
-            }
-            else if operationSign == 15{
-                currentInput = firstOperand - secondOperand
-                stilltyping = false
-            }
-            else if operationSign == 16{
-                currentInput = firstOperand + secondOperand
-                stilltyping = false
-            }
+            dotIsPlased = false
         }
-        dotIsPlased = false
-    }
     
     @IBAction func percentButtonPressed(_ sender: UIButton) {
         operationSign = sender.tag
